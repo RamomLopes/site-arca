@@ -9,6 +9,8 @@ const currentImage = document.getElementById('current-image');
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
 
+video.poster = 'https://img.freepik.com/fotos-premium/um-cachorro-de-desenho-animado-com-uma-coleira-que-diz-cachorrinho_652021-599.jpg';
+
 function showButtonPlay(){
     btnPlay.hidden = false;
     btnPause.hidden = true;
@@ -43,19 +45,16 @@ function changeVideo(number){
         case 1:
             videoSource.src = '/assets/video.mp4';
             video.load();
-            video.currentTime = 2;
             showButtonPlay();
             break;
         case 2:
             videoSource.src = '/assets/video2.mp4';
             video.load();
-            video.currentTime = 2;
             showButtonPlay();
             break;
         case 3:
             videoSource.src = '/assets/video3.mp4';
             video.load();
-            video.currentTime = 3;
             showButtonPlay();
             break;
     }
@@ -118,7 +117,7 @@ cards.forEach((card) => {
     });
 });
 
-const images = [ '/assets/dog-1.jpg', '/assets/dog-2.jpg', '/assets/dog-3.jpg', '/assets/dog-4.jpg' ];
+const images = [ '/assets/dog-3.jpg', '/assets/dog-1.jpg', '/assets/dog-2.jpg', '/assets/dog-4.jpg' ];
 let currentIndex = 0;
 
 function updateImage() {
