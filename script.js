@@ -9,6 +9,12 @@ const currentImage = document.getElementById('current-image');
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
 
+const btnPrev5Seconds = document.getElementById('btn-prev');
+const btnNext5Seconds = document.getElementById('btn-next');
+const timer = document.getElementById('timer');
+
+const duration = formatTime(video.duration);
+
 function showButtonPlay(){
     btnPlay.hidden = false;
     btnPause.hidden = true;
@@ -18,6 +24,21 @@ function showButtonPause(){
     btnPlay.hidden = true;
     btnPause.hidden = false;
 }
+
+function formatTime(duration) {
+    const minutes = Math.floor(duration / 60);
+    const seconds = Math.floor(duration % 60);
+
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+}
+
+video.addEventListener('timeupdate', () => {
+    timer.textContent = `${formatTime(video.currentTime)}/${duration}`;
+});
+
+
+btnNext5Seconds.addEventListener('click', () => video.currentTime += 5);
+btnPrev5Seconds.addEventListener('click', () => video.currentTime -= 5);
 
 btnPlay.addEventListener('click', () => {
     video.play();

@@ -73,11 +73,14 @@
         <div class="moment-content">
             <div class="moment-main">
                 <div class="frame-tv">
-                    <video id="video" class="video" poster="/assets/poster-video.png" controls controlsList="nodownload nofullscreen noplaybackrate">  
+                    <video id="video" class="video" poster="/assets/poster-video.png" controlsList="nodownload nofullscreen noplaybackrate">  
                         <source id="video-source" src="assets/video.mp4" type="video/mp4">
                     </video>
+                    <button id="btn-prev">< 5s</button>
                     <button id="btn-play"><i class="fa-solid fa-play"></i></button>
                     <button hidden id="btn-pause"><i class="fa-solid fa-pause"></i></button>
+                    <button id="btn-next">5s ></button>
+                    <span id="timer">0:00/5:52</span>
                 </div>
                 <div class="moment-info">
                     <div class="moment-tittle">

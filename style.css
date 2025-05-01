@@ -199,6 +199,7 @@ p {
     margin: 8rem 0;
 }
 
+
 .welcome-content {
     button {
         width: 230px;
@@ -262,6 +263,20 @@ p {
     justify-content: start;
     align-items: end;
 
+    #btn-prev {
+        position: absolute;
+        background-color: transparent;
+        width: fit-content;
+        left: calc(45% - 100px);
+    }
+
+    #btn-next {
+        position: absolute;
+        background-color: transparent;
+        width: fit-content;
+        left: calc(45% + 100px);
+    }
+
     #btn-play {
         position: absolute;
         background-color: transparent;
@@ -274,6 +289,14 @@ p {
         background-color: transparent;
         width: fit-content;
         left: 45%;
+    }
+
+    #timer {
+        position: absolute;
+        top: calc(100% - 40px);
+        left: calc(45% - 100px - 100px);
+        font-weight: bold;
+        color: #FFF;
     }
 }
 
