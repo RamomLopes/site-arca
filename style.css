@@ -30,14 +30,14 @@ header {
     top: 0;
     width: 100%;
     height: fit-content;
-    padding: 1rem 0;
+    padding: 1.2rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #fff;
     font-size: 18px;
     font-weight: bold;
-    z-index: 10;
+    z-index: 5;
     box-shadow: 1px 1px 40px #777;
 }
 
@@ -564,6 +564,11 @@ footer {
         color: var(--color-secondary);
         font-size: large;
         font-weight: 800;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-primary);
+        }
     }
 
     .span-column-1 {
@@ -629,10 +634,21 @@ footer {
         column-gap: 20px;
         align-items: center;
         text-align: center;
+
+       
     }
 
     span {
         line-height: 25px;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--color-primary);
+        }
+
+        i:hover {
+            color: var(--color-primary);
+        }
     }
 
     i {
@@ -776,7 +792,7 @@ footer {
     }
 
     .banner-info {
-        width: 10   0%;
+        width: 100%;
     }
 
     .moment-social-media {
@@ -789,4 +805,30 @@ footer {
 
 }
 
+@media (max-width: 450px) {
+
+    .banner-info {
+        .tittle h1{
+            font-size: 3.5rem;
+            line-height: 70px;
+        }
+
+        p {
+            width: 90%;
+        }
+    }
+    
+    .video {
+        width: 100%;
+    }
+
+    .animals-content {
+        width: 90%;
+    }
+
+    .social-media h2,
+    .galery h2 {
+        white-space: nowrap;
+    }
+}
 
