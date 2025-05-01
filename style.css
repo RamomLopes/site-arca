@@ -264,7 +264,7 @@ p {
 
     .buttons-tv {
         width: 90%;
-        height: 15%;
+        height: fit-content;
         position: absolute;
         display: flex;
         justify-content: center;
@@ -280,7 +280,7 @@ p {
             position: absolute;
             left: 20px;
             color: #fff;
-            top: 5px;
+            top: 0;
             font-size: 14px;
         }
     }
