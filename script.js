@@ -56,7 +56,12 @@ function formatTime(seconds) {
 }
 
 function setVideoTimer(currentTime, fullTime){
-    timerVideo.textContent = `${formatTime(currentTime)} / ${formatTime(fullTime)}`;
+    if (currentTime || fullTime){
+        timerVideo.textContent = `${formatTime(currentTime)} / ${formatTime(fullTime)}`;
+    } else{
+        timerVideo.textContent = '00:00 / 00:00';
+    } 
+    
 }
 
 setInterval(() => {
