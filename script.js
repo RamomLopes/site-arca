@@ -9,8 +9,6 @@ const currentImage = document.getElementById('current-image');
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
 
-video.poster = 'https://img.freepik.com/fotos-premium/um-cachorro-de-desenho-animado-com-uma-coleira-que-diz-cachorrinho_652021-599.jpg';
-
 function showButtonPlay(){
     btnPlay.hidden = false;
     btnPause.hidden = true;

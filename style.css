@@ -38,7 +38,7 @@ header {
     font-size: 18px;
     font-weight: bold;
     z-index: 10;
-    box-shadow: 0.01em 0.01em 50px #000;
+    box-shadow: 1px 1px 40px #777;
 }
 
 .header-content {
@@ -368,7 +368,8 @@ video {
     margin-bottom: 10px;
 
     button {
-        width: 200px;
+        width: 100%;
+        padding: 0 2rem;
         word-spacing: 10px;
     }
 }
@@ -702,6 +703,90 @@ footer {
     }
 }
 
+@media (max-width: 1500px) {
 
+    .moment-content {
+        width: 90%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        row-gap: 50px;
+    }
+}
+
+@media (max-width: 1250px) {
+
+    .banner-content {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .banner-info {
+        width: 60%;
+    }
+    
+    .banner-img-container {
+        display: none;
+    }
+
+    .animals-layout {
+        flex-direction: column-reverse;
+        align-items: center;
+        row-gap: 50px;
+
+        .animals-info {
+            width: 100%;
+        }
+    }
+
+    .carousel-container {
+        width: 100%;
+        
+    }
+}
+
+@media (max-width: 1100px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .moment-main {
+        display: flex;
+        flex-direction: column-reverse;
+        row-gap: 20px;
+
+        .moment-tittle {
+            text-align: center;
+        }
+
+        .frame-tv {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+
+    .banner-content,
+    .footer-content,
+    .footer-bottom-content {
+        width: 90%;
+    }
+
+    .banner-info {
+        width: 10   0%;
+    }
+
+    .moment-social-media {
+        text-align: center;
+    }
+
+    .social-media-buttons {
+        flex-direction: column;
+    }
+
+}
 
 
