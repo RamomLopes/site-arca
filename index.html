@@ -73,11 +73,19 @@
         <div class="moment-content">
             <div class="moment-main">
                 <div class="frame-tv">
-                    <video id="video" class="video" poster="/assets/poster-video.png" controls controlsList="nodownload nofullscreen noplaybackrate">  
+
+                    <video id="video" class="video" poster="/assets/poster-video.png">  
                         <source id="video-source" src="assets/video.mp4" type="video/mp4">
                     </video>
-                    <button id="btn-play"><i class="fa-solid fa-play"></i></button>
-                    <button hidden id="btn-pause"><i class="fa-solid fa-pause"></i></button>
+                    <div class="buttons-tv">
+                        <button id="btn-backward"><i class="fa-solid fa-backward-step"></i></button>
+                        <button id="btn-play"><i class="fa-solid fa-play"></i></button>
+                        <button hidden id="btn-pause"><i class="fa-solid fa-pause"></i></button>
+                        <button id="btn-forward"><i class="fa-solid fa-forward-step"></i></button>
+                        <div class="timer-video">00:00 / 00:00</div>
+                    </div>
+                    
+                    
                 </div>
                 <div class="moment-info">
                     <div class="moment-tittle">
@@ -210,11 +218,18 @@
                 <div class="social-media">
                     <h2>Redes Sociais</h2>
                     <div class="social-media-content">
-                        <span><i class="fa-brands fa-facebook-f"></i> <br> FACEBOOK</span>
-                        <span><i class="fa-brands fa-instagram"></i> <br> INSTAGRAM</span>
-                        <span><i class="fa-brands fa-youtube"></i> <br> YOUTUBE</span>
+                        <a target="_blank" href="https://www.facebook.com/arcabambui/">
+                            <span><i class="fa-brands fa-facebook-f"></i> <br> FACEBOOK</span>
+                        </a>
+                        <a target="_blank" href="https://www.instagram.com/arcabambui/">
+                            <span><i class="fa-brands fa-instagram"></i> <br> INSTAGRAM</span>
+                        </a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCRhJW_1ozBj5yaVE6_SLdOw/featured">
+                            <span><i class="fa-brands fa-youtube"></i> <br> YOUTUBE</span>
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
         <div class="footer-bottom">

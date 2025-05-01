@@ -9,6 +9,10 @@ const currentImage = document.getElementById('current-image');
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
 
+const timerVideo = document.querySelector('.timer-video');
+const btnVideoForward = document.getElementById('btn-forward');
+const btnVideoBackward = document.getElementById('btn-backward');
+
 function showButtonPlay(){
     btnPlay.hidden = false;
     btnPause.hidden = true;
@@ -18,6 +22,14 @@ function showButtonPause(){
     btnPlay.hidden = true;
     btnPause.hidden = false;
 }
+
+btnVideoBackward.addEventListener('click', () => {
+    video.currentTime -= 5;
+});
+
+btnVideoForward.addEventListener('click', () => {
+    video.currentTime += 5;
+});
 
 btnPlay.addEventListener('click', () => {
     video.play();
@@ -36,6 +48,20 @@ video.addEventListener('playing', () => {
 video.addEventListener('pause', () => {
     showButtonPlay();
 });
+
+function formatTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = Math.floor(seconds % 60).toString().padStart(2, '0');
+    return `${minutes}:${remainingSeconds}`;
+}
+
+function setVideoTimer(currentTime, fullTime){
+    timerVideo.textContent = `${formatTime(currentTime)} / ${formatTime(fullTime)}`;
+}
+
+setInterval(() => {
+    setVideoTimer(video.currentTime, video.duration);
+}, 1000);
 
 function changeVideo(number){
 

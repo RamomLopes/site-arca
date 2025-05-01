@@ -262,19 +262,29 @@ p {
     justify-content: start;
     align-items: end;
 
-    #btn-play {
+    .buttons-tv {
+        width: 90%;
+        height: 15%;
         position: absolute;
-        background-color: transparent;
-        width: fit-content;
-        left: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            width: fit-content;
+            background-color: transparent;
+            margin: 0 40px;
+        }
+
+        .timer-video {
+            position: absolute;
+            left: 20px;
+            color: #fff;
+            top: 5px;
+            font-size: 14px;
+        }
     }
 
-    #btn-pause {
-        position: absolute;
-        background-color: transparent;
-        width: fit-content;
-        left: 45%;
-    }
 }
 
 video {
@@ -635,20 +645,14 @@ footer {
         align-items: center;
         text-align: center;
 
-       
+        a *:hover {
+            color: var(--color-primary);
+        }
     }
 
     span {
         line-height: 25px;
         cursor: pointer;
-
-        &:hover {
-            color: var(--color-primary);
-        }
-
-        i:hover {
-            color: var(--color-primary);
-        }
     }
 
     i {
