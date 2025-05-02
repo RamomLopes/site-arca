@@ -146,27 +146,54 @@ cards.forEach((card) => {
     });
 });
 
-const images = [ '/assets/dog-3.jpg', '/assets/dog-1.jpg', '/assets/dog-2.jpg', '/assets/dog-4.jpg' ];
-let currentIndex = 0;
+/**
+ * 
+ * @param {string[]} images 
+ * @param {Element} carousel 
+ */
+function factoryImageController(images, carousel) {
+    const extension = "jpg";
+    const folder = "assets";
 
-function updateImage() {
-    currentImage.src = images[currentIndex];
+    /**
+     * @param {number} newIndex
+     */
+    const getCurrentIndex = (newIndex) => {
+        const length = imageController.images.length;
+
+        return ((newIndex % length) + length) % length;
+    }
+    
+    const next = () => {
+        const newIndex = imageController.currentIndex + 1;
+
+        imageController.currentIndex = getCurrentIndex(newIndex);
+        imageController.carouselRef.src = `${folder}/${images[imageController.currentIndex]}.${extension}`;
+    }
+
+    const prev = () => {
+        const newIndex = imageController.currentIndex - 1;
+
+        imageController.currentIndex = getCurrentIndex(newIndex);
+        imageController.carouselRef.src = `${folder}/${images[imageController.currentIndex]}.${extension}`;
+    }
+
+    const imageController = {
+        currentIndex: 1,
+        images: images,
+        carouselRef: carousel,
+        
+        next: next,
+        prev: prev
+    }
+
+    return imageController;
 }
 
-nextButton.addEventListener('click', () => {
-    currentIndex++;
-    if (currentIndex >= images.length) {
-        currentIndex = 0;
-    }
-    updateImage();
-});
+const images = ['dog-1', 'dog-2', 'dog-3', 'dog-4' ];
 
-prevButton.addEventListener('click', () => {
-    currentIndex--;
-    if (currentIndex < 0) {
-        currentIndex = images.length - 1;
-    }
-    updateImage();
-});
+const imageController = factoryImageController(images, currentImage);
 
-updateImage();
+nextButton.addEventListener('click', imageController.next);
+
+prevButton.addEventListener('click', imageController.prev);
