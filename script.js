@@ -72,17 +72,17 @@ function changeVideo(number){
 
     switch (+number){
         case 1:
-            videoSource.src = '/assets/video.mp4';
+            videoSource.src = 'assets/video.mp4';
             video.load();
             showButtonPlay();
             break;
         case 2:
-            videoSource.src = '/assets/video2.mp4';
+            videoSource.src = 'assets/video2.mp4';
             video.load();
             showButtonPlay();
             break;
         case 3:
-            videoSource.src = '/assets/video3.mp4';
+            videoSource.src = 'assets/video3.mp4';
             video.load();
             showButtonPlay();
             break;
