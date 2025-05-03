@@ -92,8 +92,6 @@ function changeVideo(number){
 cards.forEach((card) => {
     const paragraph = card.querySelector('.paragraph-card');
     const button = card.querySelector('.btn-card');
-    
-    console.log(card.id);
 
     if(card.id == 'card-1'){
         paragraph.hidden = false;

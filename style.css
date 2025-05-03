@@ -281,7 +281,7 @@ p {
             left: 20px;
             color: #fff;
             top: 0;
-            font-size: 14px;
+            font-size: 12px;
         }
     }
 
@@ -783,6 +783,19 @@ footer {
 
         .frame-tv {
             justify-content: center;
+
+            .buttons-tv {
+                width: 100%;
+
+                .timer-video {
+                    left: 0;
+                    padding: 0 20px;
+                }
+            }
+        }
+
+        .video {
+            width: 100%;
         }
     }
 }
@@ -820,10 +833,6 @@ footer {
         p {
             width: 90%;
         }
-    }
-    
-    .video {
-        width: 100%;
     }
 
     .animals-content {
