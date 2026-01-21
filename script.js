@@ -69,24 +69,11 @@ setInterval(() => {
 }, 1000);
 
 function changeVideo(number){
+    const fileName = number === 1 ? 'video' : `video${number}`;
 
-    switch (+number){
-        case 1:
-            videoSource.src = 'assets/video.mp4';
-            video.load();
-            showButtonPlay();
-            break;
-        case 2:
-            videoSource.src = 'assets/video2.mp4';
-            video.load();
-            showButtonPlay();
-            break;
-        case 3:
-            videoSource.src = 'assets/video3.mp4';
-            video.load();
-            showButtonPlay();
-            break;
-    }
+    videoSource.src = `assets/${fileName}.mp4`;
+    video.load();
+    showButtonPlay();
 }
 
 cards.forEach((card) => {
@@ -134,13 +121,9 @@ cards.forEach((card) => {
 
     // click no botao
     card.children[2].addEventListener('click', () => {
-
         let videoNumber = card.children[2].id;
         const number = videoNumber.slice(9);
-        console.log(number);
-
-        changeVideo(number);
-        
+        changeVideo(+number);
     });
 });
 
@@ -158,7 +141,6 @@ function factoryImageController(images, carousel) {
      */
     const getCurrentIndex = (newIndex) => {
         const length = imageController.images.length;
-
         return ((newIndex % length) + length) % length;
     }
     
